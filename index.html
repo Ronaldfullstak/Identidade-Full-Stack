@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipe de Talentos • Residência Full Stack 5.0</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='%23009fe3'><path d='M 44,23 L 44,31 L 18,44 L 11,40 L 11,38 Z'/><path d='M 11,38 L 44,23 L 44,31 L 20,42 L 44,54 L 44,63 L 11,46 Z'/><path d='M 24,59 L 44,69 L 44,78 L 24,68 Z'/><path d='M 52,23 L 85,38 L 85,69 L 78,73 L 78,44 L 52,31 Z'/><path d='M 52,50 L 75,39 L 75,47 L 52,58 Z'/><path d='M 52,65 L 72,55 L 72,63 L 52,74 Z'/></g></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="container header-container">
+      <div class="brand-logo">
+        <svg class="brand-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#009FE3">
+            <path d="M 44,23 L 44,31 L 18,44 L 11,40 L 11,38 Z" />
+            <path d="M 11,38 L 44,23 L 44,31 L 20,42 L 44,54 L 44,63 L 11,46 Z" />
+            <path d="M 24,59 L 44,69 L 44,78 L 24,68 Z" />
+            <path d="M 52,23 L 85,38 L 85,69 L 78,73 L 78,44 L 52,31 Z" />
+            <path d="M 52,50 L 75,39 L 75,47 L 52,58 Z" />
+            <path d="M 52,65 L 72,55 L 72,63 L 52,74 Z" />
+          </g>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-sub">&lt;residência&gt;</span>
+          <span class="brand-main">Full Stack <strong>5.0</strong></span>
+        </div>
+      </div>
+
+      <div class="header-badge">
+        <span class="status-dot"></span>
+        Desenvolvedores • 14 Devs
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container hero-content">
+      <span class="section-tag">Especialistas</span>
+      <h1 class="hero-title">Equipe de Talentos</h1>
+      <p class="hero-desc">Conheça os desenvolvedores responsáveis pela modelagem de dados, arquitetura de sistemas, construção de APIs e interfaces da Residência.</p>
+
+      <div class="controls-panel">
+        <div class="search-input-wrapper">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="search-input" placeholder="Filtrar por dev, especialidade ou stack (Java, React, SQL, Docker)..." autocomplete="off">
+        </div>
+
+        <div class="filter-chips">
+          <button class="chip active" data-filter="all">Todos (14)</button>
+          <button class="chip" data-filter="frontend">Front-end</button>
+          <button class="chip" data-filter="backend">Back-end</button>
+          <button class="chip" data-filter="data">Dados & SQL</button>
+          <button class="chip" data-filter="infra-qa">DevOps, QA & Sec</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-content">
+    <div id="team-grid" class="team-grid" aria-live="polite"></div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container footer-content">
+      <p>© 2026 Residência Full Stack 5.0</p>
+    </div>
+  </footer>
+
+  <template id="member-card-template">
+    <article class="member-card">
+      <div class="card-top">
+        <div class="avatar-ring">
+          <img src="" alt="" class="member-avatar" loading="lazy">
+        </div>
+        <span class="role-badge"></span>
+      </div>
+
+      <div class="card-body">
+        <h3 class="member-name"></h3>
+        <p class="member-role-title"></p>
+        <p class="member-desc"></p>
+        <div class="skills-container"></div>
+      </div>
+
+      <div class="card-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-profile btn-github">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-profile btn-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
